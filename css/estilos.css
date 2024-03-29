@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+/*REGLAS GENERALES*/
+/*definimos las variables de los colores*/
+
+:root {
+  --text-color: rgb(23, 23, 23);
+  --primary-color: rgb(91, 73, 254);
+  --secondary-color: rgb(125, 232, 140);
+  --seconday-ligth-color: rgb(207, 243, 125);
+}
+
+/* Resetear valores*/
+
+* *::after *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL PROYECTO*/
+/* Estilos genericos del cuerpo */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+
+/* Estilos de enlaces */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* Estilos de enlaces al pasar sobre ellos*/
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Estilos de párrafos */
+p {
+  margin-bottom: 10px;
+}
+
+/* Estilos de listas */
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos de encabezados */
+h1,
+h2,
+.title {
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  line-height: normal;
+  margin-bottom: 0.75rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+/* Estilos de pies de figura */
+figcaption {
+  font-size: 0.9rem;
+}
+
+/* REGLAS PARA DISEÑO RESPONSIVE*/
+/* La clase .container es un contenedor que ocupa el 100% de la pantalla manteniendo un padding a ambos lados*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 15px;
+}
+
+/* Para pantallas con un ancho mínimo de 992px */
+@media (min-width: 990px) {
+  /* Ajustar el ancho máximo del contenedor a 960px.
+     Si la pantalla es mayor de 990 el ancho máximo será de 960 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 960px;
+  }
+}
+/* Para pantallas con un ancho mínimo de 1200px */
+@media (min-width: 1200px) {
+  /* Ajustar el ancho máximo del contenedor a 1140px.
+     Si la pantalla es mayor de 1200, el ancho máximo será de 1140 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Para pantallas con un ancho mínimo de 1400px */
+@media (min-width: 1400px) {
+  /* Ajustar el ancho máximo del contenedor a 1300px.
+     Si la pantalla es mayor de 1400, el ancho máximo será de 1300 y se verán margenes a ambos lados si sigue creciendo*/
+  .container {
+    max-width: 1300px;
+  }
+}
+
+/* REGLAS PARA BLOQUES PRINCIPALES*/
+/* Header*/
+header {
+  min-height: 115px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04);
+}
+
+/* Estilos del enlace del logo*/
+header .link-logo {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+/* Estilos del logo*/
+header .logo {
+  height: 50px;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Estilos de los enlaces del menú */
+header .menu-links li {
+  margin-right: 15px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+header .menu-links a {
+  color: black;
+}
+
+/* Estilos del enlace activo del menu*/
+header .menu-links li.active a {
+  font-weight: 700;
+}
+
+/* Estilos de los enlaces del menú al pasar el ratón*/
+body .header__menu-item a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Estilos del bloque main */
+main {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Estilos de los enlaces del bloque main */
+main a {
+  border-bottom: 1px dotted var(--primary-color);
+}
+
+/* Estilos de los enlaces del bloque main on hover*/
+main a {
+  border-color: var(--secondary-color);
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 60px;
+}
+
+/* Estilos de los enlaces del pie de página */
+footer a {
+  color: white;
+}
+
+footer .legal-links {
+  margin-top: 5px;
+}
+
+footer .legal-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/*ESTILOS ESPECIFICOS DE CADA PÁGINA*/
+/*ESTILOS PÁGINA INDEX.HTML*/
+
+.page-home header {
+  background: transparent;
+  box-shadow: none;
+  position: fixed;
+  width: 100%;
+}
+
+.page-home {
+  background: linear-gradient(75deg, var(--seconday-ligth-color), 0%, var(--secondary-color));
+}
+
+.page-home main {
+  padding: 0;
+}
+
+.page-home .title {
+  font-size: 3.4rem;
+  margin-bottom: 15px;
+  line-height: 4rem;
+}
+
+.page-home .title span {
+  color: white;
+}
+
+.page-home .featured {
+  max-width: 470px;
+}
+
+.page-home main .container {
+  min-height: calc(100vh - 370px);
+  background: url(../images/hero_image_bg.png) 100% 100% no-repeat;
+  background-size: 700px auto;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.page-home main .featured .featured .featured-text {
+  margin-bottom: 25px;
+}
+
+.search-bar .search-control {
+  padding-left: 45px;
+  height: 58px;
+  background: #fff url(../images/icon_search.svg) 5px 50% no-repeat;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/*ESTILOS PÁGINA "SOBRE PETINDER"*/
+.page-about .img-fluid {
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--seconday-ligth-color);
+}
+.page-about figure {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 700px;
+  font-style: italic;
+}
+
+/*ESTILOS PÁGINA "CAMISETAS"*/
+/*tabla*/
+
+.page-tshirt main {
+  min-height: calc(100vh - 315px);
+}
+
+.table {
+  width: 100%;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+.table,
+.table th,
+.table td {
+  border: 1px solid black;
+}
+
+.table th {
+  background-color: var(--seconday-ligth-color);
+  padding: 5px 10px;
+}
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody th {
+  text-align: left;
+}
+
+.table thead th:first-child {
+  background-color: var(--seconday-ligth-color);
+}
+
+.table td {
+  background-color: white;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.table tr:nth-child(odd) td {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.table caption {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*ESTILOS PÁGINA "JOIN"*/
+/*formulario*/
+form {
+  margin-top: 40px;
+  max-width: 650px;
+}
+
+/* Estilos para el fieldset */
+fieldset {
+  border: 1px solid var(--primary-color);
+  margin-bottom: 25px;
+}
+
+/* Estilos para las leyendas */
+legend {
+  margin-left: 30px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size:1.5rem;
+}
+
+/* Estilos para las titulos y parrafos dentro del formulario */
+form h2{
+  margin: 5px 0;
+}
+
+form p{
+  margin-top: 0;
+}
+
+/* Estilos para los botones dentro del formulario */
+form button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color:white;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+  color:inherit
+}
+
+/* Estilos para los elementos del formulario (label + campo) */
+.form-item {
+  padding: 0 30px 15px 30px;
+}
+
+/* Estilos para los los campos del formulario */
+.form-item .item-control {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px 0;
+  height: 30px;
+  width: 100%;
+  font-size: 1rem;
+}
+/* Estilos para las label dentro de cada elemento del formulario */
+.form-item label {
+  font-weight: 600;
+}
+
+/* Estilo para añadir el simbolo "*" junto a la label de los elementos requeridos del formulario */
+.form-item.required label::after {
+  color: #e32;
+  content: " *";
+  display: inline;
+}
+
+/* Estilos el texto de información sobre los campos requeridos */
+.info-required{
+  color:red;
+}
+
