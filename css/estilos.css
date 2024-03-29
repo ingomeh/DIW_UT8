@@ -396,13 +396,13 @@ form button:hover {
 
 /* Estilo para añadir el simbolo "*" junto a la label de los elementos requeridos del formulario */
 .form-item.required label::after {
-  color: #e32;
+  color: #E80000 ;
   content: " *";
   display: inline;
 }
 
 /* Estilos el texto de información sobre los campos requeridos */
 .info-required{
-  color:red;
+  color:#E80000 ;
 }
 
